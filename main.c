@@ -33,6 +33,7 @@ static void logging_data_cb(int ev, void*ev_data, void *data) {
 
 static void timer_cb(void *arg){
     printf("\nBluetooth Scanning Starting!!\n");
+    //Scan period
     struct mgos_bt_gap_scan_opts period = {1000};
     mgos_bt_gap_scan(&period);
     (void) arg;
